@@ -4,7 +4,7 @@ Is your Python code lacking corporate alignment?
 
 Do you feel your pursuit of stakeholder value waning? 
 
-Does management understand how comitted your code is to client outcomes?
+Does management understand how committed your code is to client outcomes?
 
 If you answered yes to these questions, `SynergyBar` is here to reorient you back to your north star!
 Simply wrap your loops in `SynergyBar` and watch as your code instantly becomes more outcome-focussed, collaboration-minded, and priority-aligned.
