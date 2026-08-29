@@ -1,10 +1,13 @@
-# Synergy Bar
+# SynergyBar
 
-A [tqdm](https://github.com/tqdm/tqdm) progress bar that narrates itself in corporate jargon while your code runs.
+Is your Python code lacking corporate alignment?
 
-```
-Circling back...: 43%|####3     | 43/100 [00:12<00:16,  3.51it/s]
-```
+Do you feel your pursuit of stakeholder value waning? 
+
+Does management understand how comitted your code is to client outcomes?
+
+If you answered yes to these questions, `SynergyBar` is here to reorient you back to your north star!
+Simply wrap your loops in `SynergyBar` and watch as your code instantly becomes more outcome-focussed, collaboration-minded, and priority-aligned.
 
 ## Install
 
@@ -14,7 +17,7 @@ pip install synergy-bar
 
 ## Usage
 
-`SynergyBar` is a drop-in replacement for `tqdm` — wrap any iterable and it displays a random jargon phrase, updated on a timer rather than per-item:
+`SynergyBar` is a drop-in replacement for `tqdm` — wrap any iterable and it displays a random message updated on a timer:
 
 ```python
 import time
@@ -27,10 +30,10 @@ for item in SynergyBar(range(100)):
 Extra keyword arguments:
 
 - `interval` (float, default `1.0`) — seconds between message changes.
-- `profile` (str, default `"general"`) — which phrase set to use. Built-in profiles: `general`, `defence`, `education`, `finance`, `health`, `retail`, `tourism`.
-- `phrases` (list of str) — supply your own phrases instead of a built-in profile.
+- `profile` (str, default `"general"`) — which phrase set to use. Current businesses include: `general`, `defence`, `education`, `finance`, `health`, `retail`, `tourism`.
+- `phrases` (list of str) — supply your own dynamic phrases to add that personal touch.
 
-All other arguments and keyword arguments (`total`, `desc`, `unit`, etc.) are passed straight through to `tqdm`.
+All other arguments and keyword arguments are passed straight through to `tqdm`.
 
 ```python
 from synergy_bar import SynergyBar
@@ -42,3 +45,7 @@ for item in SynergyBar(range(100), profile="finance", interval=0.5):
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+## Contributing
+
+This is obviously just a bit of fun, but please feel free to add additional phrases/profiles. You never know who might urgently need to demonstrate their corporate allegiance.

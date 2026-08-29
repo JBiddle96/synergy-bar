@@ -33,6 +33,8 @@ def _load_phrases(profile: str = "general") -> list[str]:
 class SynergyBar(tqdm):
     """A tqdm progress bar that makes your code 100% more aligned to stakeholder values."""
 
+    DEFAULT_BAR_FORMAT = "{desc:<46} |{bar:20}| {percentage:3.0f}%"
+
     def __init__(
         self,
         *args: Any,
@@ -42,6 +44,7 @@ class SynergyBar(tqdm):
         **kwargs: Any,
     ) -> None:
         self._phrases: list[str] = phrases or _load_phrases(profile)
+        kwargs.setdefault("bar_format", self.DEFAULT_BAR_FORMAT)
         super().__init__(*args, **kwargs)
         self._stop_event: threading.Event = threading.Event()
         self._thread: threading.Thread = threading.Thread(
@@ -51,7 +54,7 @@ class SynergyBar(tqdm):
 
     def _narrate(self, interval: float) -> None:
         while not self._stop_event.is_set():
-            self.set_description(random.choice(self._phrases))
+            self.set_description_str(random.choice(self._phrases))
             self._stop_event.wait(interval)
 
     def close(self) -> None:
