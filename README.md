@@ -27,6 +27,12 @@ for item in SynergyBar(range(100)):
     time.sleep(0.1)
 ```
 
+Example output:
+
+```
+Operationalizing the vision...                 |########            |  40%
+```
+
 Extra keyword arguments:
 
 - `interval` (float, default `1.0`) — seconds between message changes.
