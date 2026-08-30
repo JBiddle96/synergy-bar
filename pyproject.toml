@@ -1,6 +1,6 @@
 [project]
 name = "synergy-bar"
-version = "0.1.0"
+version = "0.1.1"
 description = "A tqdm progress bar that narrates itself in corporate jargon"
 readme = "README.md"
 license = "MIT"
